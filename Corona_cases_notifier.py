@@ -8,12 +8,12 @@ def notifyMe(title,message):
 	notification.notify(
 		title = title,
 		message = message,
-		app_icon = os.getcwd()+"\covid.ico",
-		timeout = 15
+		app_icon = os.getcwd()+"\covid.ico",   #gets the current working directory
+		timeout = 15                           #time to which the notification appear
 		)
 global total_case,total_death,total_rec
 def getdata():
-        r = requests.get("https://virusncov.com/")
+        r = requests.get("https://virusncov.com/")     #site to fetch data
         data = r.content
         soup = bs(data,'lxml')
         getdata.total_case = "Total Corona cases: %s " %(soup.h2.text.split(" ")[-1])+"\n"
