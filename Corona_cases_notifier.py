@@ -22,7 +22,7 @@ def getdata():
 
 print("Welcome to the program.\n")
 print("Do you wanna pop up the program in specific time intervals or one time?\n")
-ask = int(input("enter 1 for one time or 2  for time interval any other key to exit: "))
+ask = int(input("Enter 1 for one time or 2  for time interval any other key to exit: "))
 
 if ask == 1:
         print("\nfetching data\n")
